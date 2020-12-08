@@ -17,16 +17,6 @@ resource "azurerm_resource_group" "rg" {
   location = var.location
 }
 
-variable "admin_username" {
-    type = string
-    description = "Administrator user name for virtual machine"
-}
-
-variable "admin_password" {
-    type = string
-    description = "Password must meet Azure complexity requirements"
-}
-
 # Create subnet
 resource "azurerm_subnet" "subnet" {
   name                 = "agTFSubnet"
